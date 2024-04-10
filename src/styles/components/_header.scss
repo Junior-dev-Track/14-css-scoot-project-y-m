@@ -1,5 +1,26 @@
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 10% 100px 50px;
+    gap: 10px;
     width: 100%;
+    height: 96px;
     justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    background-color: #fff;
+
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        padding-right: 15px;
+    }
+    li {
+        display: flex;
+        padding-left: 25px;
+    }
+    nav a { 
+      text-decoration: none;
+      color: #939CAA;  
+    }
+
 }
