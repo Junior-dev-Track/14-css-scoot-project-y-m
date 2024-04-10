@@ -1,6 +1,6 @@
 header {
     display: grid;
-    grid-template-columns: 10% 100px 50px;
+    grid-template-columns: 20% 55% 150px;
     gap: 10px;
     width: 100%;
     height: 96px;
@@ -12,15 +12,36 @@ header {
     ul {
         display: flex;
         justify-content: flex-start;
-        padding-right: 15px;
+        padding:0 100px 0 0;
     }
     li {
         display: flex;
-        padding-left: 25px;
+        padding: 0 15px 0 0;
+    }
+    a:hover {
+        color: #FCB72B;
+    }
+    nav {
+        display: flex;
     }
     nav a { 
       text-decoration: none;
       color: #939CAA;  
+    }
+
+    button {
+        background-color: #FCB72B;
+        color: #fff;
+        padding: 12px 25px 12px 25px;
+        border: none;
+        font-size: 0.938em;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #fff;
+        color: #FCB72B;
+        border: #FCB72B solid 1px;
+        transition: color 0.3s ease;
     }
 
 }
