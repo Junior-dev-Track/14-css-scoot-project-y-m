@@ -1,1 +1,6 @@
-@use "../global.scss"
+@use "../global.scss";
+@use "../components/header";
+@use "../components/sub-header";
+@use "../components/map-location";
+@use "../components/location-not-found";
+@use "../components/footer";
