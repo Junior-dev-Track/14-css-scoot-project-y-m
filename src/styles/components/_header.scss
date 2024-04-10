@@ -2,4 +2,43 @@ header {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    background-color: #fff;
+
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        padding:0 100px 0 0;
+    }
+    li {
+        display: flex;
+        padding: 0 15px 0 0;
+    }
+    a:hover {
+        color: #FCB72B;
+    }
+    nav {
+        display: flex;
+    }
+    nav a {
+      text-decoration: none;
+      color: #939CAA;
+    }
+
+    button {
+        background-color: #FCB72B;
+        color: #fff;
+        padding: 12px 25px 12px 25px;
+        border: none;
+        font-size: 0.938em;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #fff;
+        color: #FCB72B;
+        border: #FCB72B solid 1px;
+        transition: color 0.3s ease;
+    }
+
 }
