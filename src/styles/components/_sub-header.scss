@@ -18,12 +18,14 @@
     }
 
     &_title {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
         align-items: center;
 
+        svg {
+            display: none;
+        }
+
         & p {
+            font-family: "Space Mono";
             font-size: 56px;
             font-weight: 700;
             color: white;
@@ -31,3 +33,60 @@
         }
     }
 }
+
+@media (min-width: 768px){
+
+    .sub_banner {
+
+        &_title {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            svg {
+                display: block;
+            }
+    
+            & p {
+                font-family: "Space Mono";
+                font-size: 56px;
+                font-weight: 700;
+                color: white;
+                padding-left: 40px;
+            }
+        }
+
+    }
+
+}
+
+@media (min-width: 1110px) {
+
+    .sub_banner {
+
+        &_title {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            svg {
+                display: block;
+            }
+    
+            & p {
+                font-family: "Space Mono";
+                font-size: 56px;
+                font-weight: 700;
+                color: white;
+                padding-left: 165px;
+            }
+        }
+
+    }
+
+
+}
+
+
