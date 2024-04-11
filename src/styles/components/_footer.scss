@@ -1,25 +1,67 @@
-footer {
-    display: grid;
-    grid-template-rows: 60% 40%;
-    gap: 10px;
-    width: 100%;
-    background-color: #333A44;
-    align-items: center;
-    align-content: center;
-    
-    .background {
-        display: flex;
-        background-color: #495567;
-        font-size: 2rem; 
+@media screen and (max-width: 768px) {
+    /* Mobile screens */
+    footer {
+        display: grid;
+        grid-template-rows: auto auto;
+        width: 100%;
+        align-items: center;
+        align-content: center;
     }
-    .box_flex {
+    .background_grey {
+        position: relative;
+        background-color: #495567;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        z-index: 1; 
+    }
+    .background_darkGrey {
+        background-color: #333A44;
+        
+    }
+    .circle {
+        display: flex;
+        position: absolute;
+        z-index: 2;
+    }
+    #empty_circle {
+        position: absolute;
+        left: -105px;
+        bottom: -22px;
+    }
+    #full_circle {
+        position: absolute;
+        right: 0;
+    }
+    #middle_circle {
+        display: none;
+    }
+    .title_signup {
+        font-size: 2.0rem;
+        z-index: 10;
+        text-align: center;
+    }
+    .app_store {
         display: flex;
         justify-content: center;
-        padding-bottom: 15px;
-    }   
-    .box-logo {
+        padding-top: 20px;
+        z-index: 3;
+    }
+    .box_logo {
         display: flex;
-        
+        justify-content: center;
+        align-items: center;
+        padding: 10%;
+    }   
+    .box-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        padding-right: 15px;
     }
     a {
         text-decoration: none;
@@ -29,19 +71,159 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /*padding:0 100px 0 0;*/
+        padding: 15% 0;
     }
     ol {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        padding: 5% 0;
     }
-        
     li {
-        padding: 0 15px 0 0;
+        padding: 0 15px;
     }
     a:hover {
         color: #FCB72B;
     }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Tablets & laptop*/
+    footer {
+        display: grid;
+        grid-template-rows: auto auto;
+        width: 100%;
+        align-items: center;
+        align-content: center;
+    }
+    .background_grey {
+        background-color: #495567;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .title_signup {
+        font-size: 3em;
+    }
+    .background_darkGrey {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: #333A44;
+    }
+    .circle {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+    }
+    .box_logo {
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 15px;
+    }   
+    .box-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    img {
+        margin-right: 15px;
+    }
+    a {
+        text-decoration: none;
+        color: #939CAA; 
+    }
+    ol {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 5% 0;
+    }
+    li {
+        padding: 15px;
+    }
+    a:hover {
+        color: #FCB72B;
+    }
+}
+@media screen and (min-width: 1025px) {
+    footer {
+        display: grid;
+        grid-template-rows: auto auto;
+        width: 100%;
+        align-items: center;
+        align-content: center;
+    }
+    .background_grey {
+        position: relative;
+        background-color: #495567;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
     
+    }
+    .app_store{
+    
+    }
+    .title_signup {
+        font-size: 3em;
+        
+    }
+    .circle {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        
+    }
+    .background_darkGrey {
+        display: grid;
+        grid-template-columns: 20% 20% 60%;
+        background-color: #333A44;
+    }
+    .box_logo {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 0 0 15px;
+    }   
+    .box-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    img {
+        padding-right: 15px;
+    }
+    a {
+        text-decoration: none;
+        color: #939CAA; 
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+    }
+    ol {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 5% 0 5% 40%;
+    }
+    li {
+        padding: 15px;
+    }
+    a:hover {
+        color: #FCB72B;
+    }
 }
