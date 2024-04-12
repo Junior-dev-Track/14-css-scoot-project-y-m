@@ -7,6 +7,21 @@
     .poi_tablet {
         display: none;
     }
+    .locations_name{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 5%;
+    }
+    .location_card {
+        display: flex;
+        background-color: rgba(252, 183, 43, 0.15);
+        width: 355px;
+        height: 72px;
+        justify-content: center;
+        align-items: center;
+        margin: 2%;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .map_locations .world {
@@ -14,6 +29,9 @@
         height: 100%;
         }
         .poi-mobile {
+        display: none;
+    }
+    .locations_name {
         display: none;
     }
 }
@@ -25,5 +43,8 @@
     .poi-mobile {
             display: none;
         }
+    .locations_name {
+        display: none;
+    }
 
 }
