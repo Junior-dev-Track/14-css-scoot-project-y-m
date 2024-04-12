@@ -1,0 +1,248 @@
+Subject: [PATCH] footer responsive done svg not yet
+---
+Index: src/pages/careers.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/pages/careers.html b/src/pages/careers.html
+--- a/src/pages/careers.html	(revision c7396fbc486f4b4f84b1f5cf3d5e8fa8133a403f)
++++ b/src/pages/careers.html	(revision 61b957325598ffb881a155782b8df896cc958021)
+@@ -169,26 +169,26 @@
+     <footer>
+         
+         <div class="background_grey">
++            <div class="title_signup">          
++                <p>Sign up and Scoot off today</p>
++            </div> 
+             <div class="circle">
+-                    <div> 
++                    <div id="empty_circle"> 
+                         <svg width="133" height="158" viewBox="0 0 133 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle opacity="0.1" cx="173.5" cy="173.5" r="173.5" transform="matrix(-1 0 0 1 125 8)" stroke="#E5ECF4" stroke-width="15"/>
+                         </svg>
+-                    </div>
++                    </div>                  
+                     <div id="middle_circle">
+                         <svg width="363" height="158" viewBox="0 0 363 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle opacity="0.1" cx="173.5" cy="173.5" r="173.5" transform="matrix(-1 0 0 1 355 8)" stroke="#E5ECF4" stroke-width="15"/>
+                         </svg>
+                     </div>
+-                    <div>
++                    <div id="full_circle">
+                         <svg width="184" height="158" viewBox="0 0 184 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                         <circle opacity="0.1" cx="173.5" cy="173.5" r="173.5" transform="matrix(-1 0 0 1 347 0)" fill="#E5ECF4"/>
+                         </svg>
+                     </div>
+             </div>
+-            <div class="title_signup">          
+-                <p>Sign up and Scoot off today</p>
+-            </div> 
+             <div class="app_store">
+                 <img src="/Group 28appStore.png" alt="Logo app store">
+                 <img src="/Group 28 googleStore.png" alt="logo google play">
+Index: src/styles/components/_footer.scss
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/styles/components/_footer.scss b/src/styles/components/_footer.scss
+--- a/src/styles/components/_footer.scss	(revision c7396fbc486f4b4f84b1f5cf3d5e8fa8133a403f)
++++ b/src/styles/components/_footer.scss	(revision 61b957325598ffb881a155782b8df896cc958021)
+@@ -14,20 +14,29 @@
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+-        padding: 20px; 
++        padding: 20px;
++        z-index: 1; 
+     }
+     .background_darkGrey {
+         background-color: #333A44;
+         
+     }
+     .circle {
++        display: flex;
+         position: absolute;
+-        bottom: -6px;
+-        right: 2px;
+-        z-index: 5;
++        z-index: 2;
++    }
++    #empty_circle {
++        position: absolute;
++        left: -105px;
++        bottom: -22px;
++    }
++    #full_circle {
++        position: absolute;
++        right: 0;
+     }
+     #middle_circle {
+-        display:  ;
++        display: none;
+     }
+     .title_signup {
+         font-size: 2.0rem;
+@@ -38,7 +47,7 @@
+         display: flex;
+         justify-content: center;
+         padding-top: 20px;
+-        z-index: 10;
++        z-index: 3;
+     }
+     .box_logo {
+         display: flex;
+@@ -62,7 +71,7 @@
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+-        padding: 15% 0 15% 0;
++        padding: 15% 0;
+     }
+     ol {
+         display: flex;
+@@ -79,7 +88,7 @@
+ }
+ 
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+-    /* Tablets */
++    /* Tablets & laptop*/
+     footer {
+         display: grid;
+         grid-template-rows: auto auto;
+@@ -88,7 +97,6 @@
+         align-content: center;
+     }
+     .background_grey {
+-        position: relative;
+         background-color: #495567;
+         display: flex;
+         flex-direction: column;
+@@ -96,28 +104,42 @@
+         align-items: center;
+         padding: 20px;
+     }
++    .title_signup {
++        font-size: 3em;
++    }
+     .background_darkGrey {
++        display: grid;
++        grid-template-columns: 1fr 1fr 1fr;
+         background-color: #333A44;
+     }
+     .circle {
+-        position: absolute;
+-        bottom: -6px;
+-        right: 2px;
++        position: relative;
++        bottom: 0;
++        right: 0;
+         z-index: 5;
+     }
++    .box_logo {
++        display: flex;
++        align-items: center;
++        padding: 0 0 0 15px;
++    }   
++    .box-icons {
++        display: flex;
++        justify-content: center;
++        align-items: center;
++    }
++    ul {
++        display: flex;
++        flex-direction: row;
++        align-items: center;
++    }
+     img {
+-        padding-right: 15px;
++        margin-right: 15px;
+     }
+     a {
+         text-decoration: none;
+         color: #939CAA; 
+     }
+-    ul {
+-        display: flex;
+-        flex-direction: column;
+-        align-items: center;
+-        padding: 15% 0 15% 0;
+-    }
+     ol {
+         display: flex;
+         flex-direction: row;
+@@ -125,7 +147,7 @@
+         padding: 5% 0;
+     }
+     li {
+-        padding: 0 15px;
++        padding: 15px;
+     }
+     a:hover {
+         color: #FCB72B;
+@@ -143,14 +165,41 @@
+         position: relative;
+         background-color: #495567;
+         display: flex;
+-        flex-direction: column;
++        flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         padding: 20px;
++    
++    }
++    .app_store{
++    
++    }
++    .title_signup {
++        font-size: 3em;
++        
++    }
++    .circle {
++        position: relative;
++        bottom: 0;
++        right: 0;
++        
+     }
+     .background_darkGrey {
++        display: grid;
++        grid-template-columns: 20% 20% 60%;
+         background-color: #333A44;
+     }
++    .box_logo {
++        display: flex;
++        justify-content: flex-end;
++        align-items: center;
++        padding: 0 0 0 15px;
++    }   
++    .box-icons {
++        display: flex;
++        justify-content: center;
++        align-items: center;
++    }
+     img {
+         padding-right: 15px;
+     }
+@@ -161,17 +210,18 @@
+     ul {
+         display: flex;
+         flex-direction: row;
++        justify-content: center;
+         align-items: center;
+-        padding: 15px 0 15px 0;
++        padding: 15px 0;
+     }
+     ol {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+-        padding: 5% 0;
++        padding: 5% 0 5% 40%;
+     }
+     li {
+-        padding: 0 15px;
++        padding: 15px;
+     }
+     a:hover {
+         color: #FCB72B;
