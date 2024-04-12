@@ -2,31 +2,18 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0 25px;
+    padding: 0 25px 120px 25px;
     align-items: center;
     gap: 30px;
-
-    h2 {
-        font-family: "Space Mono";
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 32px;
-        
-    }
-
 
     &_list {
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 45px;
+        gap: 48px;
 
         &_title {
             h3 {
-                font-family: "Space Mono";
-                font-weight: 700;
-                font-size: 24px;
-                line-height: 28px;
                 text-align: center;
             }
         }
@@ -41,19 +28,11 @@
 
 
             h4 {
-                font-family: "Space Mono";
-                font-weight: 700;
                 color: black;
-                font-size: 18px;
-                line-height: 24px;
             }
 
             p {
-                font-family: "Space Mono";
-                font-weight: 400;
                 color: black;
-                font-size: 15px;
-                line-height: 25px;
                 margin-top: 25px;
             }
 
@@ -88,15 +67,25 @@
     }
 }
 
-@media (min-width: 1110px) {
+@media (min-width: 768px) {
+	.faq {
+		padding: 0 40px 120px 40px;
+	}
+}
+
+@media (min-width: 1024px) {
     .faq {
-        padding: 0 165px;
+        padding: 0 165px 120px 165px;
 
         &_list {
             flex-direction: row;
 
             &_title {
                 width: 30%;
+				
+				h3 {
+					text-align: start;
+				}
             }
 
             &_qa {
