@@ -1,0 +1,73 @@
+.map_not_found {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px 72px 32px;
+    gap: 32px;
+
+    h2 {
+        text-align: center;
+        width: 311px;
+        text-transform: capitalize;
+        color: rgba(73, 85, 103, 1);
+    
+    }
+
+    p {
+        text-align: center;
+        width: 311px;
+        font-family: "Lexend Deca";
+        color: rgba(147, 156, 170, 1);
+    }
+
+}
+
+
+@media (min-width: 768px){
+
+    .map_not_found {
+        gap: 40px;
+
+        padding: 0 98px 120px 98px;
+
+        h2 {
+            width: 457px;
+            color: rgba(73, 85, 103, 1);
+        }
+    
+        p {
+            width: 457px;
+        }
+
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .map_not_found {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 165px 120px 165px;
+        gap: unset;
+
+        h2 {
+            text-transform: none;
+            margin-right: 30px;
+            text-align: left;
+            color: rgba(73, 85, 103, 1);
+        }
+    
+        p {
+            margin-right: 105px;
+            text-align: left;
+        }
+    }
+    
+    }
+
+
