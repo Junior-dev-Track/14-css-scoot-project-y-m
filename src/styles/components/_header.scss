@@ -92,7 +92,7 @@
                 padding: 64px 0 0 32px;
                 display: flex;
                 flex-direction: column;
-                gap: 24px;
+                gap: 32px;
 
                 li a {
                     text-decoration: none;
@@ -111,23 +111,6 @@
             &_button {
                 padding: 0 32px 24px 32px;
                 width: 256px;
-
-                button {
-                    width: 100%;
-                    background-color: #FCB72B;
-                    color: #fff;
-                    padding: 14px 39px;
-                    border: none;
-                    font-size: 0.938em;
-                    cursor: pointer;
-
-                    &:hover {
-                        background-color: #fff;
-                        color: #FCB72B;
-                        border: #FCB72B solid 1px;
-                        transition: color 0.3s ease;
-                    }
-                }
             }
         }
     }
@@ -187,9 +170,9 @@
     }
 }
 
-@media (min-width: 1110px) {
+@media (min-width: 1024px) {
     .header {
         position: relative;
-        padding: 0 160px;
+        padding: 0 165px;
     }
 }

@@ -51,31 +51,20 @@
         &_content {
 
             h2 {
-
-                font-family: "Space Mono";
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 28px;
-                letter-spacing: -0.9px;
                 text-align: center;
                 margin-bottom: 24px;
 
             }
 
             p {
-                font-family: "Lexend Deca";
-                font-weight: 400;
-                font-size: 15px;
-                line-height: 25px;
                 text-align: center;
-
             }
         }
     }
 }
 
 
-@media (min-width: 768px) and (max-width:1110px) {
+@media (min-width: 768px) and (max-width:1023px) {
 
     .get_scooting {
         padding: 122px 98px 0 98px;
@@ -127,55 +116,51 @@
     }
 
 
-    @media (min-width: 1110px) {
+@media (min-width: 1024px) {
 
-        .get_scooting {
-            padding: 160px 165px 0 165px;
-            gap: 30px;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-direction: row;
-    
-            &_decor {
-                display: block;
-                width: 974px;
-                height: 1px;
-                top: 208px;
-                left: 0px;
-            }
-    
-            &_task {
-                justify-content: flex-start;
-                align-items: flex-start;
-    
-                &_icon {
-                    min-width: 96px;
-                    min-height: 96px;
-                    height: 96px;
-                    width: 96px;
-    
-                    svg {
-                        height: 48px;
-                        width: 48px;
-                    }
-                }
-    
-                &_content {
-    
-                    h2{
-                        text-align: left;
-                        margin-bottom: 28px;
-                    }
-    
-                    p {
-                        text-align: left;
-                    }
-    
-                }
-            }
-        }
-    
-        }
+	.get_scooting {
+		padding: 160px 165px 0 165px;
+		gap: 30px;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-direction: row;
 
+		&_decor {
+			display: block;
+			width: 974px;
+			height: 1px;
+			top: 208px;
+			left: 0px;
+		}
 
+		&_task {
+			justify-content: flex-start;
+			align-items: flex-start;
 
+			&_icon {
+				min-width: 96px;
+				min-height: 96px;
+				height: 96px;
+				width: 96px;
+
+				svg {
+					height: 48px;
+					width: 48px;
+				}
+			}
+
+			&_content {
+
+				h2{
+					text-align: left;
+					margin-bottom: 28px;
+				}
+
+				p {
+					text-align: left;
+				}
+
+			}
+		}
+	}
+}
