@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 32px 72px 32px;
+    padding: 72px 32px 72px 32px;
     gap: 32px;
 
     h2 {
@@ -20,6 +20,7 @@
         width: 311px;
         font-family: "Lexend Deca";
         color: rgba(147, 156, 170, 1);
+
     }
 
 }
@@ -30,7 +31,7 @@
     .map_not_found {
         gap: 40px;
 
-        padding: 0 98px 120px 98px;
+        padding: 64px 98px 120px 98px;
 
         h2 {
             width: 457px;
@@ -52,7 +53,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 0 165px 120px 165px;
+        padding: 120px 165px 120px 165px;
         gap: unset;
 
         h2 {
@@ -60,6 +61,7 @@
             margin-right: 30px;
             text-align: left;
             color: rgba(73, 85, 103, 1);
+            width: 350px;
         }
     
         p {
